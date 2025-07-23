@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Home | User Management{% endblock %}
+{% block content %}
+
+<div class="container text-center py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="p-5 bg-white rounded shadow-sm">
+        <h1 class="mb-4">Welcome to the User Management System</h1>
+        <p class="lead">Manage users, access roles, login as admin or user, and perform secure actions with ease.</p>
+        <hr class="my-4">
+
+        <div class="d-grid gap-3 d-md-flex justify-content-center mt-4">
+          <a href="{% url 'register' %}" class="btn btn-outline-primary btn-lg">📝 Register</a>
+          <a href="{% url 'user_login' %}" class="btn btn-outline-success btn-lg">👤 User Login</a>
+          <a href="{% url 'admin_login' %}" class="btn btn-outline-dark btn-lg">🔐 Admin Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
